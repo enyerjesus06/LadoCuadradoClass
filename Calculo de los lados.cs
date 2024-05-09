@@ -15,15 +15,26 @@ public class Class1
         int constante = 4;
         string linea = string.Empty;
 
-        Console.WriteLine("Ingrese la longitud del lado del cuadrado: ");
+
+
+        try
+        {
+            
+            Console.WriteLine("Ingrese la longitud del lado del cuadrado: ");
             linea = Console.ReadLine();
             lado = Convert.ToInt32(linea);
 
-        perimetro = (lado * constante);
+            perimetro = (lado * constante);
 
-        Console.WriteLine($"El perímetro del cuadrado es: { perimetro } ");
-    
-    
+            Console.WriteLine($"El perímetro del cuadrado es: {perimetro} ");
+        
+        }   
+        catch (Exception ex) 
+        {
+            Console.WriteLine($"Ocurrio el siguiente error: {ex.Message} ");
+
+        }
+         
     }
 
 
